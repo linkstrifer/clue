@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<title>Encuentra el mensaje!</title>
+<meta charset="utf-8">
+<link rel="stylesheet" href="lib/css/css.css">
+<link rel="stylesheet" href="lib/css/footer.css">
+<script src="lib/js/jquery.1.7.1.js"></script>
+<script>
+	
+	var mensaje = 0;
+	
+	function alerta(texto){
+
+		if (mensaje == 0) {
+			$("#mensaje").css('height','0em');
+			$("#mensaje").text(texto);
+			$("#mensaje").css('height','2em');
+		}
+		if (mensaje == 1) {
+			$("#mensaje").css('height','100%');
+			$("#mensaje").css('width','50%');
+			$("#mensaje").text(texto);
+			
+		}
+		if (mensaje == 2) {
+			$("#mensaje").css('width','100%');
+			$("#mensaje").text(texto);
+			$("#mensaje").css('height','100%');
+			$("#mensaje").css('font-size','30em');
+		}
+		if (mensaje == 3) {
+			$("#mensaje").css('width','70%');
+			$("#mensaje").html(texto);
+			$("#mensaje").css('height','65%');
+			$("#mensaje").css('font-size','2em');
+			$("#mensaje").css('top','10%');
+			$("#mensaje").css('left','25%');
+		}
+	}
+
+	$(document).keydown(function(tecla){
+
+	    if (tecla.keyCode == 66 && mensaje == 0) {
+	        alerta('Oh!, encontraste una pista, sabes que tecla presionaste?');
+	        mensaje = 1;
+	    }
+	    if (tecla.keyCode == 65 && mensaje == 1) {
+	    	alerta('Otra pista, te faltan dos! creo que ya es bastante obvio!');
+	    	mensaje = 2;
+	    }
+	    if (tecla.keyCode == 75 && mensaje == 2) {
+	        alerta('Ñom!');
+	        mensaje = 3;
+	    }
+	    if (tecla.keyCode == 65 && mensaje == 3) {
+	    	alerta('Hoy soñé con el amor de mi vida eras tú.<p>Hoy soñé una vida y era contigo <p>Hoy soñé escribiendo poesía y era sobre ti<p>Hoy soñé que eras solo mia<p>Hoy ya no quiero soñar quiero que mis sueños se hagan realidad.<p align="right">Te amo Baka! ');
+	    }
+	});
+
+</script>
+<footer>
+	Hecho por @<a href="//twitter.com/linkstrifer" target="_blank">LinkStrifer</a> para @<a href="//twitter.com/utopicaa" target="_blank">Utopicaa</a>.
+</footer>
+<div id="mensaje">
+	Encuentra el mensaje!
+</div>
+<div id="trampa-click" onclick="alerta('No es algo a lo que se le pueda hacer click!!')">
+</div>
+<div id="trampa-texto">
+	Tampoco es algo que se pueda seleccionar!
+</div>

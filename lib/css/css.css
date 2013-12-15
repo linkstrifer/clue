@@ -1,0 +1,56 @@
+@import url(http://fonts.googleapis.com/css?family=Kaushan+Script);
+
+::selection{
+	background-color: #c00;
+	color:#fff;
+}
+
+#mensaje a,
+#mensaje a:active,
+#mensaje a:hover,
+#mensaje a:visited {
+	color: #ffcaca;
+	text-decoration: none;
+}
+
+body {
+	background: #333 url('https://dl.dropboxusercontent.com/u/16779447/linkstrifer.com/song/bkg.png') fixed;
+	color: #c00;
+	font-family: 'Kaushan Script', cursive;
+	margin: 0;
+}
+
+#mensaje {
+	-webkit-transition: all 0.5s ease;
+	-moz-transition: all 0.5s ease;
+	-o-transition: all 0.5s ease;
+	transition: all 0.5s ease;
+	background-color: #cc0000;
+	color: #ffcaca;
+	cursor: default;
+	font-size: 3em;
+	margin: auto;
+	overflow: hidden;
+	position: absolute;
+}
+
+#trampa-click {
+	background-color: none;
+	cursor: pointer;
+	height: 300px;
+	position: absolute;
+	top: 50%;
+	left: 74%;
+	width: 300px;
+}
+
+#trampa-texto {
+	background-color: none;
+	color: rgba(0,0,0,0);
+	cursor: default;
+	height: auto;
+	font-size: 5em;
+	position: absolute;
+	top: 30%;
+	width: 50%;
+}
